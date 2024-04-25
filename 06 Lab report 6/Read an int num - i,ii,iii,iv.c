@@ -1,39 +1,34 @@
 #include <stdio.h>
 
 int main() {
-    int num, originalNum, remainder, count = 0, sum = 0, reversedNum = 0;
+    int num, originalNum, remainder, count = 0, sum = 0, reverse = 0;
 
-    // Input
     printf("Enter an integer number: ");
     scanf("%d", &num);
 
     originalNum = num;
 
-    // Reversing the number
-    while (originalNum != 0) {
-        remainder = originalNum % 10;
-        reversedNum = reversedNum * 10 + remainder;
-        originalNum /= 10;
-    }
-
-    // Palindrome check
-    if (num == reversedNum) {
-        printf("%d is a palindrome.\n", num);
-    } else {
-        printf("%d is not a palindrome.\n", num);
-    }
-
-    // Counting number of digits and summing them
+    // Counting digits, calculating sum and reversing the number
     while (num != 0) {
         remainder = num % 10;
-        sum += remainder;
         count++;
+        sum += remainder;
+        reverse = reverse * 10 + remainder;
         num /= 10;
     }
 
-    printf("Number of digits: %d\n", count);
+    // Printing count of digits and sum of digits
+    printf("\nCount of digits: %d\n", count);
     printf("Sum of digits: %d\n", sum);
-    printf("Reversed number: %d\n", reversedNum);
+
+    // Printing reverse of the number
+    printf("Reverse of the number: %d\n", reverse);
+
+    // Checking for palindrome
+    if (originalNum == reverse)
+        printf("The number %d is a palindrome number.\n",originalNum);
+    else
+        printf("The number %d is not a palindrome number.\n",originalNum);
 
     return 0;
 }
