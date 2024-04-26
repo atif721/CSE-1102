@@ -1,12 +1,15 @@
 #include <stdio.h>
-#include<conio.h>
 #include <stdlib.h>
-
-#define ARRAY_SIZE 20
+#include<time.h>
 
 int main()
 {
-    int i,array[ARRAY_SIZE], sum=0;
+    srand(time(NULL));
+    int i,ARRAY_SIZE, sum=0;
+    printf("Enter array size : ");
+    scanf("%d",&ARRAY_SIZE);
+
+    int array[ARRAY_SIZE];
 
     for (i = 0; i < ARRAY_SIZE; i++)
     {
@@ -16,7 +19,7 @@ int main()
     printf("Random numbers in the array:\n");
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        printf("array[%3d] = %d\n",i,array[i]);
+        printf("array[%3d] = %3d\n",i,array[i]);
     }
 
     for (i = 0; i < ARRAY_SIZE; i++)
