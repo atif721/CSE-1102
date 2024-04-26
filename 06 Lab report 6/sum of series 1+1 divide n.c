@@ -3,19 +3,20 @@
 int main()
 {
     int term;
-    float sum = 0;
+    float sum = 0.0;
 
-    printf("Enter the number of terms: ");
+    printf("Enter n-th terms: ");
     scanf("%d", &term);
-    printf("\n");
+    printf("\nThe series is : 1");
 
     for (int i = 1; i <= term; i++)
     {
-        printf("1/%d",i);
+        if(i>1)
+            printf("1/%d",i);
+
         if(i<term)
-        {
             printf(" + ");
-        }
+
         sum += 1.0 / i;
     }
 
