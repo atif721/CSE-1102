@@ -1,22 +1,25 @@
 #include <stdio.h>
-#include<conio.h>
 #include <stdlib.h>
-
-#define ARRAY_SIZE 10
+#include<time.h>
 
 int main()
 {
-    int i,array[ARRAY_SIZE],search_element,found = 0;
+    srand(time(NULL));
+    int i,ARRAY_SIZE, search_element, found = 0;
+    printf("Enter array size : ");
+    scanf("%d",&ARRAY_SIZE);
+
+    int array[ARRAY_SIZE];
 
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        array[i] = rand()%50;
+        array[i] = rand()%50; // here rand()%* is not fixed you can change this range as your will.
     }
 
-    printf("Random numbers in the array:\n\n");
+    printf("\nRandom numbers in the array:\n");
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        printf("array[%d] = %d\n",i,array[i]);
+        printf("array[%3d] = %3d\n",i,array[i]);
     }
 
     printf("\nEnter the element to search: ");
@@ -26,12 +29,12 @@ int main()
     {
         if (array[i] == search_element)
         {
-            found = i;
+            found = 1;
             break;
         }
     }
 
-    if (found)
+    if (found==1)
     {
         printf("\nElement %d found at index %d\n", search_element, i);
     }
@@ -42,5 +45,3 @@ int main()
 
     return 0;
 }
-
-
