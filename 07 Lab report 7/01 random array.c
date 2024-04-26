@@ -14,7 +14,7 @@ int main()
 
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        array[i] = rand()%100;
+        array[i] = rand()%100; // here rand()%* is not fixed you can change this range as your will.
     }
 
     printf("Random numbers in the array:\n");
