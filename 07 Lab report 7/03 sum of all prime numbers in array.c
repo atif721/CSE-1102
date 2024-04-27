@@ -17,13 +17,16 @@ int main()
         array[i] = rand()%50; // here rand()%* is not fixed you can change this range as your will.
     }
 
-    printf("Random numbers in the array:\n");
+    //printf("Random numbers in the array:\n");
+    printf("\nRandom numbers in the array: ");
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        printf("array[%3d] = %3d\n",i,array[i]);
+        //printf("array[%3d] = %3d\n",i,array[i]);
+        printf("%d  ",array[i]);
     }
+    printf("\n\n");
 
-    printf("\nPrime numbers are : \n");
+    printf("Prime numbers are : ");
     for (i = 0; i < ARRAY_SIZE; i++)
     {
         prime = True;
@@ -38,12 +41,13 @@ int main()
 
         if (prime && array[i] > 1)
         {
-            printf("array[%3d] = %d\n",i,array[i]);
+            printf("%d ",array[i]);
             sum += array[i];
         }
     }
+    printf("\n\n");
 
-    printf("\nSum of prime numbers in the array: %d\n", sum);
+    printf("Sum of prime numbers in the array: %d\n", sum);
 
     return 0;
 }

@@ -17,11 +17,14 @@ int main()
         array[i] = rand()%100; // here rand()%* is not fixed you can change this range as your will.
     }
 
-    printf("Random numbers in the array:\n");
+    //printf("Random numbers in the array:\n");
+    printf("\nRandom numbers in the array: ");
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        printf("array[%3d] = %3d\n",i,array[i]);
+        //printf("array[%3d] = %3d\n",i,array[i]);
+        printf("%d ",array[i]);
     }
+    printf("\n");
 
     max = min = array[0];
 

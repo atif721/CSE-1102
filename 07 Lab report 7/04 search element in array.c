@@ -16,13 +16,16 @@ int main()
         array[i] = rand()%50; // here rand()%* is not fixed you can change this range as your will.
     }
 
-    printf("\nRandom numbers in the array:\n");
+    //printf("Random numbers in the array:\n");
+    printf("\nRandom numbers in the array: ");
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        printf("array[%3d] = %3d\n",i,array[i]);
+        //printf("array[%3d] = %3d\n",i,array[i]);
+        printf("%d  ",array[i]);
     }
+    printf("\n\n");
 
-    printf("\nEnter the element to search: ");
+    printf("Enter the element to search: ");
     scanf("%d", &search_element);
 
     for (i = 0; i < ARRAY_SIZE; i++)
@@ -34,7 +37,7 @@ int main()
         }
     }
 
-    if (found==1)
+    if (found)
     {
         printf("\nElement %d found at index %d\n", search_element, i);
     }
