@@ -30,7 +30,7 @@ int main()
     for (i = 0; i < ARRAY_SIZE; i++)
     {
         prime = True;
-        for (j = 2; j <= array[i]; j++)
+        for (j = 2; j <= array[i]/2; j++)
         {
             if (array[i] % j == 0)
             {
