@@ -6,7 +6,7 @@ int main()
 {
     srand(time(NULL));
 
-    int i,ARRAY_SIZE, max, min, max_index = 0, min_index = 0;
+    int i,ARRAY_SIZE, max, min, max_index, min_index;
     printf("Enter array size : ");
     scanf("%d",&ARRAY_SIZE);
 
