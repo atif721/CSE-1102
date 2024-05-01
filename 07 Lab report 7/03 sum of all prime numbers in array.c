@@ -6,7 +6,7 @@ int main()
 {
     srand(time(NULL));
 
-    int ARRAY_SIZE, i, j, prime, sum=0, True=1, False=0;;
+    int ARRAY_SIZE, i, j, prime, sum=0;
     printf("Enter array size : ");
     scanf("%d",&ARRAY_SIZE);
 
@@ -29,12 +29,12 @@ int main()
     printf("Prime numbers are : ");
     for (i = 0; i < ARRAY_SIZE; i++)
     {
-        prime = True;
-        for (j = 2; j <= array[i] / 2; j++)
+        prime = 1;
+        for (j = 2; j <= array[i]/2; j++)
         {
             if (array[i] % j == 0)
             {
-                prime = False;
+                prime = 0;
                 break;
             }
         }
