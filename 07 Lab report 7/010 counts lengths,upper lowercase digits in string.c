@@ -7,7 +7,7 @@ int main()
 
     // Input string
     printf("Enter a sentence:");
-    fgets(str, sizeof(str), stdin);
+    gets(str);
 
     // Calculating length of the string
     for (i = 0; str[i] != '\0'; i++)
