@@ -8,7 +8,6 @@ int main()
     printf("Enter the length of the password: ");
     scanf("%d", &length);
 
-
     char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char lowercase[] = "abcdefghijklmnopqrstuvwxyz";
     char digits[] = "0123456789";
