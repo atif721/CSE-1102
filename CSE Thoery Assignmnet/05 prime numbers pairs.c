@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Function to display prime number pairs whose sum is equal to a given number
 void primenum(int num)
 {
     printf("Prime pairs whose sum is equal to %d:\n", num);
@@ -13,18 +12,16 @@ void primenum(int num)
     }
 }
 
-// Function to check prime number
 int isPrime(int n)
 {
     if (n <= 1)
-        return 0; // Not prime
+        return 0;
     for (int i = 2; i < n; i++)
     {
         if (n % i == 0)
-            return 0; // Not prime
+            return 0;
     }
-    return 1; // Prime
-}
+    return 1;
 
 int main()
 {

@@ -13,7 +13,7 @@ int main()
 
     srand(time(0));
     number = ((rand()%(stop-start)+1)+start);
-    //printf("%d",number);
+    printf("%d",number);
 
 
     for(int i=0; i<10; i++) {
@@ -25,15 +25,15 @@ int main()
             printf("Your Score is : %d\n",(10-i));
             return 0;
         } else if(number<guess) {
-            printf("\nHigh\n");
+            printf("High\n");
 
         } else if(number>guess) {
-            printf("\nLOW\n");
+            printf("LOW\n");
 
         }
     }
 
     printf("\nSorry. you ran out of tries. The number was %d\n",number);
-
+    return 0;
 }
 
